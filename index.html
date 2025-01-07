@@ -1,103 +1,293 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-   
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<html><head><base href="https://kencondit.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenneth R. Condit - Data Analyst Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #3498db;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        header {
+            background: var(--primary-color);
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: var(--secondary-color) 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        header a:hover {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        #showcase {
+            min-height: 400px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1015&q=80') no-repeat center center/cover;
+            text-align: center;
+            color: #ffffff;
+        }
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        #boxes {
+            margin-top: 20px;
+        }
+        #boxes .box {
+            float: left;
+            width: 30%;
+            padding: 10px;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        #boxes .box:hover {
+            transform: translateY(-5px);
+        }
+        #boxes .box img {
+            width: 90px;
+            filter: invert(45%) sepia(36%) saturate(2281%) hue-rotate(341deg) brightness(100%) contrast(89%);
+        }
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #ffffff;
+            background-color: var(--secondary-color);
+            text-align: center;
+        }
+        section {
+            background-color: #ffffff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li:before {
+            content: "•";
+            color: var(--accent-color);
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Kenneth R. Condit</span> Data Analyst</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <section id="showcase">
+        <div class="container">
+            <h1>Aspiring Data Analyst</h1>
+            <p>Transforming data into actionable insights</p>
+        </div>
+    </section>
 
-    <link rel="stylesheet" href="style.css" />
-    <title>Web Challenge</title>
-  </head>
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/python.svg" alt="Python icon">
+                <h3>Python</h3>
+                <p>Proficient in data analysis and manipulation using Python and its libraries.</p>
+            </div>
+            <div class="box">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/microsoftsqlserver.svg" alt="SQL icon">
+                <h3>SQL</h3>
+                <p>Experienced in database management and complex querying.</p>
+            </div>
+            <div class="box">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/tableau.svg" alt="Tableau icon">
+                <h3>Data Visualization</h3>
+                <p>Skilled in creating insightful visualizations using Tableau and Power BI.</p>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
-
-      <a class="navbar-brand bg-info text-white p-2" href="index.html">Latitude</a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-
-      <span class="navbar-toggler-icon"></span>
-
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-              <li class="nav-item active dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="visualizations\comparison-lg.png">Max Temperature</a>
-                      <a class="dropdown-item" href="visualizations\comparison-lg.png">Humidity</a>
-                      <a class="dropdown-item" href="visualizations\comparison-lg.png">Cloudiness</a>
-                      <a class="dropdown-item" href="visualizations\comparison-lg.png">Wind Speed</a>
-                  </div>
-              </li>
-              <li class="nav-item active">
-                  <a class="nav-link" href="comparisons.html">Comparison</a>
-              </li>
-              <li class="nav-item active">
-                  <a class="nav-link" href="data.html">Data</a>
-              </li>
-          </ul>
-      </div>
-
-  </nav>
-
-  <div class="container">
-      <div class="row">
-          <div class="col-md-8 col-lg-8 mt-8">
-              <div class="card">
-                  <h4 class="card-header text-info">Visualizations</h4>
-                  <div class="card-body">
-                      <img id="img-wrap" class="img-fluid img-center" src="visualizations\landing-sm.png" Title="Lat vs Temp" width="400">
-                      <p class="card-text font-weight-light"></p>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-md-6 col-lg-6 mt-8">
-              <div class="card">
-                  <h4 class="card-header text-info">Visualizations</h4>
-                  <div class="card-body">
-
-                      <div class="row pb-6">
-                          <div class="col-md-6">
-                              <a href="visualizations\comparison-lg.png"><img class="img-fluid img-center viz-box" src="visualizations\comparison-lg.png" title="Lat vs. Max Temp" width="400"></a>
-                          </div>
-                          <div class="col-md-6">
-                              <a href="visualizations\comparison-lg.png"><img class="img-fluid img-center viz-box" src="visualizations\comparison-lg.png" title="Lat vs. Humidity" width="400"></a>
-                          </div>
-                      </div>
-                      <div class="row pb-3">
-                          <div class="col-md-6">
-                              <a href="visualizations\comparison-lg.png"><img class="img-fluid img-center viz-box" src="visualizations\comparison-lg.png" title="Lat vs. Cloudiness" width="400"></a>
-                          </div>
-                          <div class="col-md-6">
-                              <a href="visualizations\comparison-lg.png"><img class="img-fluid img-center viz-box" src="visualizations\comparison-lg.png" title="Lat vs. Wind Speed" width="400"></a>
-                          </div>
-                      </div>
-                  </div>
-
-
-              </div>
-
-          </div>
-
-      </div>
-
-  </div>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a senior at Rowan University, pursuing a B.S. in Information Systems and Analytics. With a strong background in operations and supply chain management, I am transitioning into the field of data analysis. My unique blend of technical skills and real-world experience positions me to provide valuable insights in data-driven decision making.</p>
         </section>
-      </main>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Data Analysis and Visualization</li>
+                <li>Python, SQL, Tableau, Power BI</li>
+                <li>Database Management (PostgreSQL, MongoDB, Access)</li>
+                <li>ETL Processes</li>
+                <li>Advanced Microsoft Excel</li>
+                <li>HTML and Web Design</li>
+                <li>Big Data (Hadoop)</li>
+                <li>Machine Learning Fundamentals</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <h3>Operations Supervisor - US Foods, Swedesboro NJ (Mar 2015 – Jun 2022)</h3>
+            <p>Led large teams and managed high-volume logistics operations. Conducted financial data analysis and identified root causes for customer credits and inventory discrepancies.</p>
+
+            <h3>Inventory Supervisor - Albert's Organics (UNFI), Logan Twp. NJ (Jan 2013 – Dec 2015)</h3>
+            <p>Managed inventory control and implemented process improvements using Lean Six Sigma methodologies.</p>
+
+            <h3>Co-Owner - Weston Bakeries (Feb 2010 – Oct 2013)</h3>
+            <p>Managed operations and finances for a bakery distribution route, gaining valuable entrepreneurial experience.</p>
+
+            <h3>Operations Manager - Rastelli Foods, Swedesboro NJ (Jun 2000 – Dec 2009)</h3>
+            <p>Oversaw supply chain logistics and warehouse management systems, coordinating international and domestic shipments.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <h3>Rowan University</h3>
+            <p>B.S. in Information Systems and Analytics (Expected May 2024)</p>
+
+            <h3>Rowan College of South Jersey</h3>
+            <p>Associate of Business Administration (Jan 2023 – April 2024)</p>
+            <p>Dean's List, Alpha Beta Kappa Member, AICPA member</p>
+
+            <h3>University of Pennsylvania</h3>
+            <p>Certificate in Data Science (May 2022 – Dec 2022)</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>Kenneth R. Condit</p>
+            <p>210 Chestnut Street, Turnersville, New Jersey, 08012</p>
+            <p>Phone: 856-207-3304</p>
+            <p>Email: <a href="mailto:krcondit@outlook.com">krcondit@outlook.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ken-condit/" target="_blank">Ken Condit</a></p>
+            <p>GitHub: <a href="https://github.com/krc31182" target="_blank">krc31182 (Kenneth Condit)</a></p>
+        </section>
     </div>
 
-    <script
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    ></script>
-  </body>
+    <footer>
+        <p>&copy; 2023 Kenneth R. Condit. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add a scroll-to-top button
+        const scrollToTopBtn = document.createElement('button');
+        scrollToTopBtn.innerHTML = '↑';
+        scrollToTopBtn.style.position = 'fixed';
+        scrollToTopBtn.style.bottom = '20px';
+        scrollToTopBtn.style.right = '20px';
+        scrollToTopBtn.style.fontSize = '20px';
+        scrollToTopBtn.style.backgroundColor = 'var(--secondary-color)';
+        scrollToTopBtn.style.color = 'white';
+        scrollToTopBtn.style.border = 'none';
+        scrollToTopBtn.style.borderRadius = '50%';
+        scrollToTopBtn.style.width = '40px';
+        scrollToTopBtn.style.height = '40px';
+        scrollToTopBtn.style.cursor = 'pointer';
+        scrollToTopBtn.style.display = 'none';
+        scrollToTopBtn.style.transition = 'opacity 0.3s ease-in-out';
+
+        document.body.appendChild(scrollToTopBtn);
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'block';
+                scrollToTopBtn.style.opacity = '1';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+                setTimeout(() => {
+                    scrollToTopBtn.style.display = 'none';
+                }, 300);
+            }
+        });
+    </script>
+</body>
 </html>
