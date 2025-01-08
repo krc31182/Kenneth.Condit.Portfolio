@@ -182,7 +182,7 @@
     <header>
         <div class="container">
             <div id="profile">
-                <img src="https://via.placeholder.com/150" alt="Profile Picture">" alt="Profile Picture">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
             </div>
             <h1>Kenneth R. Condit</h1>
         </div>
@@ -240,8 +240,12 @@
             <div class="project">
                 <img src="path/to/project1-image.jpg" alt="Project 1 Image">
                 <div>
-                    <h3>Project 1: Data Analysis with Python</h3>
-                    <p>Conducted comprehensive data analysis using Python, leveraging libraries like pandas and matplotlib to visualize data and uncover actionable insights.</p>
+                    <h3>CitiBike Analysis</h3>
+                    <p>This project analyzes CitiBike usage in Jersey City, New Jersey, during the summer of 2022. The goal is to provide actionable insights to city officials to help improve and publicize the CitiBike program. Leveraging Pandas for data analysis and Tableau for visualization, this project presents key findings to guide decision-making and drive program success.</p>
+                    <div class="tableau-graph">
+                        <!-- Replace with your Tableau Public embed code -->
+                        <iframe src="https://public.tableau.com/views/CitiBikeAnalysis/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" width="800" height="600"></iframe>
+                    </div>
                     <a href="https://github.com/krc31182/project1" target="_blank">View on GitHub</a>
                 </div>
             </div>
@@ -344,36 +348,12 @@
         scrollToTopBtn.style.bottom = '20px';
         scrollToTopBtn.style.right = '20px';
         scrollToTopBtn.style.font-size = '20px';
-        scrollToTopBtn.style.backgroundColor = 'var(--secondary-color)';
-        scrollToTopBtn.style.color = 'white';
-        scrollToTopBtn.style.border = 'none';
-        scrollToTopBtn.style.borderRadius = '50%';
-        scrollToTopBtn.style.width = '40px';
-        scrollToTopBtn.style.height = '40px';
-        scrollToTopBtn.style.cursor = 'pointer';
-        scrollToTopBtn.style.display = 'none';
-        scrollToTopBtn.style.transition = 'opacity 0.3s ease-in-out';
-
-        document.body.appendChild(scrollToTopBtn);
-
-        scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollToTopBtn.style.display = 'block';
-                scrollToTopBtn.style.opacity = '1';
-            } else {
-                scrollToTopBtn.style.opacity = '0';
-                setTimeout(() => {
-                    scrollToTopBtn.style.display = 'none';
-                }, 300);
-            }
-        });
-    </script>
-</body>
-</html>
+        scrollToTopBtn.style.background-color: var(--secondary-color);
+        scrollToTopBtn.style.color: 'white';
+        scrollToTopBtn.style.border: 'none';
+        scrollToTopBtn.style.border-radius: '50%';
+        scrollToTopBtn.style.width: '40px';
+        scrollToTopBtn.style.height: '40px';
+        scrollToTopBtn.style.cursor: 'pointer';
+        scrollToTopBtn.style.display: 'none';
+        scrollToTopBtn.style.transition: 'opacity
