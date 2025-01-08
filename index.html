@@ -1,14 +1,18 @@
-<html><head><base href="https://kencondit.com">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="https://kencondit.com">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenneth R. Condit Portfolio</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #e74c3c;
-            --accent-color: #3498db;
-            --background-color: #ecf0f1;
-            --text-color: #34495e;
+            --primary-color: #2c3e50; /* Darker blue-gray */
+            --secondary-color: #34495e; /* Dark blue-gray */
+            --accent-color: #e74c3c; /* Red */
+            --background-color: #1a252f; /* Dark background */
+            --text-color: #000000; /* Black text */
+            --header-background: #17202a; /* Even darker background for header */
         }
         body {
             font-family: 'Roboto', sans-serif;
@@ -25,33 +29,45 @@
             padding: 0 20px;
         }
         header {
+            background: var(--header-background);
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: left;
+            border-bottom: var(--secondary-color) 3px solid;
+            display: flex;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 48px; /* Larger font for the name */
+            margin-left: 20px;
+        }
+        header #profile {
+            margin-right: 20px;
+        }
+        header #profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        nav {
             background: var(--primary-color);
             color: #ffffff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: var(--secondary-color) 3px solid;
+            text-align: center;
+            padding: 10px 0;
         }
-        header a {
+        nav a {
             color: #ffffff;
             text-decoration: none;
             text-transform: uppercase;
             font-size: 16px;
+            margin: 0 15px;
         }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-        header .highlight, header .current a {
-            color: var(--secondary-color);
+        nav .highlight, nav .current a {
+            color: var(--accent-color);
             font-weight: bold;
         }
-        header a:hover {
+        nav a:hover {
             color: var(--accent-color);
             font-weight: bold;
         }
@@ -82,6 +98,7 @@
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
+            color: var(--text-color); /* Darker text for readability */
         }
         #boxes .box:hover {
             transform: translateY(-5px);
@@ -103,11 +120,19 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: var(--text-color); /* Darker text for readability */
         }
         h2 {
             color: var(--primary-color);
             border-bottom: 2px solid var(--accent-color);
             padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        h2 img {
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
         }
         ul {
             list-style-type: none;
@@ -127,32 +152,58 @@
         a:hover {
             text-decoration: underline;
         }
+        /* Projects Section */
+        #projects .project {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin-bottom: 1em;
+            background-color: #fff;
+            color: var(--text-color); /* Darker text for readability */
+        }
+        #projects .project img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        #projects .project h3 {
+            margin-top: 0;
+        }
+        /* Video Section */
+        #video iframe {
+            display: block;
+            margin: 0 auto;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <div id="branding">
-                <h1><span class="highlight">Kenneth R. Condit </span> Data Science - Business Analytics - Information Systems</h1>
+            <div id="profile">
+                <img src="C:/Users/krcon/OneDrive/Desktop/PortfolioKennethC/PrestigePicTextRemoved.jpeg" alt="Profile Picture">
             </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <h1>Kenneth R. Condit</h1>
         </div>
     </header>
 
+    <nav>
+        <div class="container">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
     <section id="showcase">
         <div class="container">
-            <h1>Business and Data Analytics Professional</h1>
-            <p>Applying practical solutions to get results</p>
+            <h1>Business Solutions and Tech Professional</h1>
+            <p>Applying practical solutions to achieve exceptional results</p>
         </div>
     </section>
 
@@ -177,13 +228,48 @@
     </section>
 
     <div class="container">
+        <!-- YouTube Video Section -->
+        <section id="video">
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Video Icon">Watch My Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/1006/1006555.png" alt="Projects Icon">My Projects</h2>
+            <div class="project">
+                <img src="path/to/project1-image.jpg" alt="Project 1 Image">
+                <div>
+                    <h3>Project 1: Data Analysis with Python</h3>
+                    <p>Conducted comprehensive data analysis using Python, leveraging libraries like pandas and matplotlib to visualize data and uncover actionable insights.</p>
+                    <a href="https://github.com/krc31182/project1" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="path/to/project2-image.jpg" alt="Project 2 Image">
+                <div>
+                    <h3>Project 2: SQL Database Management</h3>
+                    <p>Designed and managed a robust relational database using SQL Server, optimizing complex queries to enhance performance and efficiency.</p>
+                    <a href="https://github.com/krc31182/project2" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="path/to/project3-image.jpg" alt="Project 3 Image">
+                <div>
+                    <h3>Project 3: Placeholder for Future Project</h3>
+                    <p>Future project details will be added here. Stay tuned for more exciting developments and innovative solutions.</p>
+                    <a href="https://github.com/krc31182/project3" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
         <section id="about">
-            <h2>About Me</h2>
-            <p>I am a senior at Rowan University, pursuing a B.S. in Information Systems and Analytics. With a strong background in operations and supply chain management, I am transitioning into the field of data analysis. My unique blend of technical skills and real-world experience positions me to provide valuable insights in data-driven decision making.</p>
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/1256/1256654.png" alt="About Icon">About Me</h2>
+            <p>As a senior at Rowan University, I am pursuing a B.S. in Information Systems and Analytics. My background in operations and supply chain management, paired with my expertise in data analysis, positions me uniquely to drive data-driven decision-making and operational excellence.</p>
         </section>
 
         <section id="skills">
-            <h2>Skills</h2>
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Skills Icon">Skills</h2>
             <ul>
                 <li>Data Analysis and Visualization</li>
                 <li>Python, SQL, Tableau, Power BI</li>
@@ -197,22 +283,22 @@
         </section>
 
         <section id="experience">
-            <h2>Professional Experience</h2>
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="Experience Icon">Professional Experience</h2>
             <h3>Operations Supervisor - US Foods, Swedesboro NJ (Mar 2015 – Jun 2022)</h3>
-            <p>Led large teams and managed high-volume logistics operations. Conducted financial data analysis and identified root causes for customer credits and inventory discrepancies.</p>
+            <p>Led large teams and managed high-volume logistics operations. Conducted financial data analysis to identify root causes of customer credits and inventory discrepancies, driving improvements in efficiency and accuracy.</p>
 
             <h3>Inventory Supervisor - Albert's Organics (UNFI), Logan Twp. NJ (Jan 2013 – Dec 2015)</h3>
-            <p>Managed inventory control and implemented process improvements using Lean Six Sigma methodologies.</p>
+            <p>Managed inventory control and implemented Lean Six Sigma methodologies to streamline processes and reduce waste.</p>
 
             <h3>Co-Owner - Weston Bakeries (Feb 2010 – Oct 2013)</h3>
-            <p>Managed operations and finances for a bakery distribution route, gaining valuable entrepreneurial experience.</p>
+            <p>Directed operations and financial management for a bakery distribution route, enhancing service delivery and business growth.</p>
 
             <h3>Operations Manager - Rastelli Foods, Swedesboro NJ (Jun 2000 – Dec 2009)</h3>
-            <p>Oversaw supply chain logistics and warehouse management systems, coordinating international and domestic shipments.</p>
+            <p>Oversaw supply chain logistics and warehouse management systems, coordinating international and domestic shipments to ensure timely and efficient delivery.</p>
         </section>
 
         <section id="education">
-            <h2>Education</h2>
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/1256/1256647.png" alt="Education Icon">Education</h2>
             <h3>Rowan University</h3>
             <p>B.S. in Information Systems and Analytics (Expected May 2024)</p>
 
@@ -225,7 +311,7 @@
         </section>
 
         <section id="contact">
-            <h2>Contact Information</h2>
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/1256/1256655.png" alt="Contact Icon">Contact Information</h2>
             <p>Kenneth R. Condit</p>
             <p>210 Chestnut Street, Turnersville, New Jersey, 08012</p>
             <p>Phone: 856-207-3304</p>
@@ -257,7 +343,7 @@
         scrollToTopBtn.style.position = 'fixed';
         scrollToTopBtn.style.bottom = '20px';
         scrollToTopBtn.style.right = '20px';
-        scrollToTopBtn.style.fontSize = '20px';
+        scrollToTopBtn.style.font-size = '20px';
         scrollToTopBtn.style.backgroundColor = 'var(--secondary-color)';
         scrollToTopBtn.style.color = 'white';
         scrollToTopBtn.style.border = 'none';
