@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,23 +34,26 @@
             background: var(--header-background);
             color: #ffffff;
             padding: 20px 0;
-            text-align: left;
             border-bottom: var(--secondary-color) 3px solid;
+        }
+        
+        header .container {
             display: flex;
             align-items: center;
+            justify-content: space-between; /* Space between the name and profile picture */
         }
-        header #profile {
-            margin-right: 20px;
+        
+        header h1 {
+            margin: 0;
+            font-size: 48px; /* Larger font for the name */
         }
+        
         header #profile img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
         }
-        header h1 {
-            margin: 0;
-            font-size: 48px; /* Larger font for the name */
-        }
+        
         nav {
             background: var(--primary-color);
             color: #ffffff;
@@ -120,6 +124,11 @@
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             color: var(--text-color); /* Darker text for readability */
+            transition: all 0.3s ease-in-out; /* Add transition for dynamic scrolling */
+        }
+        section:hover {
+            background-color: #f0f0f0; /* Change to light gray on hover */
+            transform: scale(1.02); /* Slightly enlarge on hover */
         }
         h2 {
             color: var(--primary-color);
@@ -138,7 +147,10 @@
             padding-left: 0;
         }
         ul li:before {
-            content: "•";
+            content: ""; /* Remove checkmarks for skills list */
+        }
+        .key-steps ul li:before {
+            content: "\2713"; /* Checkmark */
             color: var(--accent-color);
             display: inline-block;
             width: 1em;
@@ -154,6 +166,7 @@
         /* Projects Section */
         #projects {
             display: flex;
+            flex-direction: column; /* Ensure projects stack vertically */
         }
         #projects .project {
             flex: 3;
@@ -164,10 +177,15 @@
             margin-bottom: 1em;
             background-color: #fff;
             color: var(--text-color); /* Darker text for readability */
+            transition: all 0.3s ease-in-out; /* Add transition for dynamic scrolling */
+        }
+        #projects .project:hover {
+            background-color: #f0f0f0; /* Change to light gray on hover */
+            transform: scale(1.02); /* Slightly enlarge on hover */
         }
         #projects .project img {
-            width: 100px;
-            height: 100px;
+            width: 300px; /* Make project pictures larger */
+            height: 300px; /* Make project pictures larger */
             margin-right: 20px;
         }
         #projects .project h3 {
@@ -177,20 +195,34 @@
             flex: 1;
             margin-left: 20px;
         }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: var(--accent-color);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .button:hover {
+            background-color: #c0392b; /* Darker shade of red */
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
+            <h1></p>Kenneth R. Condit</p></h1>
             <div id="profile">
                 <!-- Placeholder for profile picture -->
-                <img src="images/PrestigePic.JPG" alt="Profile Picture">
+                <img src="images/ProfilePic.jpeg" alt="Profile Picture">
             </div>
-            <h1>Kenneth R. Condit</h1>
         </div>
     </header>
-
     <nav>
         <div class="container">
             <a href="#home">Home</a>
@@ -214,9 +246,11 @@
         <!-- About Me Section -->
         <section id="about">
             <h2><img src="https://cdn-icons-png.flaticon.com/512/1256/1256654.png" alt="About Icon">About Me</h2>
-            <p>I’m a professional with over 20 years of experience in supply chain, logistics, and inventory control. I’ve led teams, optimized processes, and managed complex projects, including coordinating global exports and overseeing 150,000 cases across 300+ domestic routes weekly.</p>
-            <p>My passion for problem-solving and innovation led me to earn a Data Science Certificate at the University of Pennsylvania, where I developed expertise in programming, data analysis, and machine learning. I combine this technical knowledge with my operational experience to bridge the gap between data insights and real-world business strategies.</p>
-            <p>Outside of work, I’m dedicated to fitness, enjoy fishing, and stay inspired by exploring the latest advancements in technology and AI. I’m a strong communicator and team leader, excited to contribute to a forward-thinking team ready to tackle complex challenges and achieve exceptional results.</p>
+            <p>I’m a seasoned professional with over 20 years of leadership experience in supply chain management, logistics, and inventory control. Throughout my career, I’ve built and led high-performing teams, streamlined operations, and managed complex projects with measurable impact. For instance, I’ve coordinated global export initiatives and ensured the seamless weekly movement of 150,000 cases across 300+ domestic routes.
+
+                What sets me apart is my ability to blend operational expertise with cutting-edge technology. Driven by a passion for innovation, I earned a Data Science Certificate from the University of Pennsylvania, honing skills in programming, data analysis, and machine learning. This technical acumen allows me to turn data-driven insights into actionable strategies that improve efficiency, drive cost savings, and create lasting value for organizations.
+                
+                Outside of work, I channel my energy into fitness, fishing, and exploring advancements in technology and AI. I’m a collaborative communicator and results-oriented leader who thrives on solving complex challenges. I’m excited to bring my expertise and forward-thinking approach to a dynamic team poised for success.</p>
         </section>
 
         <!-- Projects Section -->
@@ -226,7 +260,7 @@
                 <div>
                     <h3>Unsupervised Machine Learning - Predicting Myopia (Nearsightedness)</h3>
                     <p>Through application of unsupervised machine learning techniques, the myopia dataset reveals three distinct clusters, offering profound insights into patient segmentation. This clustering was achieved through the implementation of principal component analysis (PCA), a powerful dimensionality reduction method. Utilizing two principal components, the model captures 38% of the dataset's variance, providing a substantial representation of the underlying data structure. Expanding to three principal components increases the captured variance to 47.24%, offering a more comprehensive view of the dataset's inherent patterns. The analysis unveils clear and significant groupings of patient characteristics within the dataset, suggesting distinct subpopulations or phenotypes related to myopia.</p>
-                    <a href="https://github.com/krc31182/Unsupervised-Machine-Learning" target="_blank">View on GitHub</a>
+                    <a href="https://github.com/krc31182/Unsupervised-Machine-Learning" class="button" target="_blank">View on GitHub</a>
                 </div>
             </div>
             <div class="key-steps">
@@ -245,7 +279,7 @@
                 <div>
                     <h3>Amazon Reviews - Lifestyles Healthcare Customer Sentiment Analysis</h3>
                     <p>LifeStyles Healthcare aimed to deepen their understanding of customer sentiment and product performance by analyzing product reviews from their Amazon.com pages. To move beyond traditional star ratings, the team implemented sentiment analysis to gain more nuanced insights. This analysis enabled them to predict star ratings based on review text, address customer concerns, and identify impactful keywords for marketing campaigns. The team started by cleaning and organizing the data before creating word clouds and bigrams to visualize commonly used positive and negative terms. Key findings included "good" as the most frequent positive word and "break" as the most common negative term. Additionally, "great product" was identified as the top positive bigram, while "allergic reaction" emerged as the leading negative bigram. These insights were leveraged by the marketing team to enhance Amazon digital campaigns and address product issues. Further analysis involved identifying top- and bottom-performing items to derive actionable strategies for improvement.</p>
-                    <a href="https://github.com/krc31182/Amazon-Reviews" target="_blank">View on GitHub</a>
+                    <a href="https://github.com/krc31182/Amazon-Reviews" class="button" target="_blank">View on GitHub</a>
                 </div>
             </div>
             <div class="key-steps">
@@ -297,14 +331,60 @@
         <section id="skills">
             <h2><img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Skills Icon">Skills</h2>
             <ul>
-                <li>Data Analysis and Visualization</li>
-                <li>Python, SQL, Tableau, Power BI</li>
-                <li>Database Management (PostgreSQL, MongoDB, Access)</li>
-                <li>ETL Processes</li>
-                <li>Advanced Microsoft Excel</li>
-                <li>HTML and Web Design</li>
-                <li>Big Data (Hadoop)</li>
-                <li>Machine Learning Fundamentals</li>
+                <li>●
+                    Data Analysis and Visualization
+                    ●
+                    Python Programming
+                    ●
+                    SQL and NoSQL Database Management
+                    ●
+                    Machine Learning
+                    ●
+                    ETL Processes
+                    ●
+                    Microsoft Excel
+                    ●
+                    HTML and Web Design
+                    ●
+                    Big Data (Hadoop)
+                    ●
+                    Leadership and Team Management
+                    ●
+                    Operations and Supply Chain Management
+                    ●
+                    Problem-Solving
+                    ●
+                    Financial Analysis
+                    ●
+                    Communication
+                    ●
+                    Lean Six Sigma Methodology
+                    ●
+                    Version Control (Git and GitHub)
+                    ●
+                    Collective Bargaining
+                    ●
+                    HACCP Certification
+                    ●
+                    AI Enthusiasm
+                    ●
+                    Pandas
+                    ●
+                    Tableau
+                    ●
+                    Matplotlib
+                    ●
+                    Leaflet
+                    ●
+                    PostgreSQL
+                    ●
+                    MongoDB
+                    ●
+                    Access
+                    ●
+                    Neural Networks
+                    ●
+                    Sentiment Analysis</li>
             </ul>
         </section>
 
@@ -322,7 +402,6 @@
             <h3>Operations Manager - Rastelli Foods, Swedesboro NJ (Jun 2000 – Dec 2009)</h3>
             <p>Oversaw supply chain logistics and warehouse management systems, coordinating international and domestic shipments to ensure timely and efficient delivery.</p>
         </section>
-
         <section id="education">
             <h2><img src="https://cdn-icons-png.flaticon.com/512/1256/1256647.png" alt="Education Icon">Education</h2>
             <h3>Rowan University</h3>
@@ -339,17 +418,12 @@
         <section id="contact">
             <h2><img src="https://cdn-icons-png.flaticon.com/512/1256/1256655.png" alt="Contact Icon">Contact Information</h2>
             <p>Kenneth R. Condit</p>
-            <p>210 Chestnut Street, Turnersville, New Jersey, 08012</p>
+            <p>Website: <a href="https://krc31182.github.io/Kenneth.Condit.Portfolio/">Kenneth Condit</a></p>
             <p>Phone: 856-207-3304</p>
             <p>Email: <a href="mailto:krcondit@outlook.com">krcondit@outlook.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/ken-condit/" target="_blank">Ken Condit</a></p>
             <p>GitHub: <a href="https://github.com/krc31182" target="_blank">krc31182 (Kenneth Condit)</a></p>
         </section>
-    </div>
 
-    <footer>
-        <p>&copy; 2023 Kenneth R. Condit. All rights reserved.</p>
-    </footer>
 
-    <script>
-        // Smooth scrolling for navigation
+        
