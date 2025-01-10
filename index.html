@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenneth R. Condit Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
             --primary-color: #2c3e50; /* Darker blue-gray */
@@ -37,11 +38,6 @@
             display: flex;
             align-items: center;
         }
-        header h1 {
-            margin: 0;
-            font-size: 48px; /* Larger font for the name */
-            margin-left: 20px;
-        }
         header #profile {
             margin-right: 20px;
         }
@@ -49,6 +45,10 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 48px; /* Larger font for the name */
         }
         nav {
             background: var(--primary-color);
@@ -89,12 +89,11 @@
             margin-top: 20px;
         }
         #boxes .box {
-            float: left;
-            width: 30%;
+            width: 100%;
             padding: 10px;
             text-align: center;
             background-color: #ffffff;
-            margin: 10px;
+            margin: 10px 0;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
@@ -103,7 +102,7 @@
         #boxes .box:hover {
             transform: translateY(-5px);
         }
-        #boxes .box img {
+        #boxes .box img, #boxes .box i {
             width: 90px;
             filter: invert(45%) sepia(36%) saturate(2281%) hue-rotate(341deg) brightness(100%) contrast(89%);
         }
@@ -140,7 +139,7 @@
         }
         ul li:before {
             content: "•";
-            color: var(--accent-color);
+            color: var (--accent-color);
             display: inline-block;
             width: 1em;
             margin-left: -1em;
@@ -153,7 +152,11 @@
             text-decoration: underline;
         }
         /* Projects Section */
+        #projects {
+            display: flex;
+        }
         #projects .project {
+            flex: 3;
             display: flex;
             align-items: center;
             border: 1px solid #ddd;
@@ -170,10 +173,9 @@
         #projects .project h3 {
             margin-top: 0;
         }
-        /* Video Section */
-        #video iframe {
-            display: block;
-            margin: 0 auto;
+        .key-steps {
+            flex: 1;
+            margin-left: 20px;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -182,7 +184,8 @@
     <header>
         <div class="container">
             <div id="profile">
-                <img src=".images/Testimage.jpg" alt="Profile Picture">
+                <!-- Placeholder for profile picture -->
+                <img src="path/to/profile-picture.jpg" alt="Profile Picture">
             </div>
             <h1>Kenneth R. Condit</h1>
         </div>
@@ -202,74 +205,93 @@
 
     <section id="showcase">
         <div class="container">
-            <h1>Business Solutions and Tech Professional</h1>
+            <h1>Strategic Business Analyst | Leveraging AI for Innovative Solutions</h1>
             <p>Applying practical solutions to achieve exceptional results</p>
         </div>
     </section>
 
-    <section id="boxes">
-        <div class="container">
-            <div class="box">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/python.svg" alt="Python icon">
-                <h3>Python</h3>
-                <p>Proficient in data analysis and manipulation using Python and its libraries.</p>
-            </div>
-            <div class="box">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/microsoftsqlserver.svg" alt="SQL icon">
-                <h3>SQL</h3>
-                <p>Experienced in database management and complex querying.</p>
-            </div>
-            <div class="box">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/tableau.svg" alt="Tableau icon">
-                <h3>Data Visualization</h3>
-                <p>Skilled in creating insightful visualizations using Tableau and Power BI.</p>
-            </div>
-        </div>
-    </section>
-
     <div class="container">
-        <!-- YouTube Video Section -->
-        <section id="video">
-            <h2><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Video Icon">Watch My Video</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- About Me Section -->
+        <section id="about">
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/1256/1256654.png" alt="About Icon">About Me</h2>
+            <p>I’m a professional with over 20 years of experience in supply chain, logistics, and inventory control. I’ve led teams, optimized processes, and managed complex projects, including coordinating global exports and overseeing 150,000 cases across 300+ domestic routes weekly.</p>
+            <p>My passion for problem-solving and innovation led me to earn a Data Science Certificate at the University of Pennsylvania, where I developed expertise in programming, data analysis, and machine learning. I combine this technical knowledge with my operational experience to bridge the gap between data insights and real-world business strategies.</p>
+            <p>Outside of work, I’m dedicated to fitness, enjoy fishing, and stay inspired by exploring the latest advancements in technology and AI. I’m a strong communicator and team leader, excited to contribute to a forward-thinking team ready to tackle complex challenges and achieve exceptional results.</p>
         </section>
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2><img src="https://cdn-icons-png.flaticon.com/512/1006/1006555.png" alt="Projects Icon">My Projects</h2>
             <div class="project">
-                <img src="path/to/project1-image.jpg" alt="Project 1 Image">
+                <img src="path/to/project1-image.jpg" alt="Project 1 Image"> <!-- Replace with your Project 1 image path -->
                 <div>
-                    <h3>CitiBike Analysis</h3>
-                    <p>This project analyzes CitiBike usage in Jersey City, New Jersey, during the summer of 2022. The goal is to provide actionable insights to city officials to help improve and publicize the CitiBike program. Leveraging Pandas for data analysis and Tableau for visualization, this project presents key findings to guide decision-making and drive program success.</p>
-                    <div class="tableau-graph">
-                        <!-- Replace with your Tableau Public embed code -->
-                        <iframe src="https://public.tableau.com/views/CitiBikeAnalysis/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" width="800" height="600"></iframe>
-                    </div>
-                    <a href="https://github.com/krc31182/project1" target="_blank">View on GitHub</a>
-                </div>
-            </div>
-            <div class="project">
-                <img src="path/to/project2-image.jpg" alt="Project 2 Image">
-                <div>
-                    <h3>Project 2: SQL Database Management</h3>
-                    <p>Designed and managed a robust relational database using SQL Server, optimizing complex queries to enhance performance and efficiency.</p>
+                    <h3>Unsupervised Machine Learning - Predicting Myopia (Nearsightedness)</h3>
+                    <p>Through application of unsupervised machine learning techniques, the myopia dataset reveals three distinct clusters, offering profound insights into patient segmentation. This clustering was achieved through the implementation of principal component analysis (PCA), a powerful dimensionality reduction method. Utilizing two principal components, the model captures 38% of the dataset's variance, providing a substantial representation of the underlying data structure. Expanding to three principal components increases the captured variance to 47.24%, offering a more comprehensive view of the dataset's inherent patterns. The analysis unveils clear and significant groupings of patient characteristics within the dataset, suggesting distinct subpopulations or phenotypes related to myopia.</p>
                     <a href="https://github.com/krc31182/project2" target="_blank">View on GitHub</a>
                 </div>
             </div>
-            <div class="project">
-                <img src="path/to/project3-image.jpg" alt="Project 3 Image">
-                <div>
-                    <h3>Project 3: Placeholder for Future Project</h3>
-                    <p>Future project details will be added here. Stay tuned for more exciting developments and innovative solutions.</p>
-                    <a href="https://github.com/krc31182/project3" target="_blank">View on GitHub</a>
-                </div>
+            <div class="key-steps">
+                <h3>Key Steps Taken</h3>
+                <ul>
+                    <li>Data Preprocessing: The dataset was cleaned and standardized to remove any biases before applying machine learning algorithms.</li>
+                    <li>Dimensionality Reduction: PCA (Principal Component Analysis) was used to reduce the number of features while preserving 90% of the data variance.</li>
+                    <li>Cluster Analysis: K-means clustering was performed to identify potential clusters in the data. An elbow plot was used to determine the optimal number of clusters.</li>
+                    <li>Visualization: t-SNE was applied to visualize the dimensionality reduction and inspect the distinctness of clusters.</li>
+                </ul>
             </div>
         </section>
-
-        <section id="about">
-            <h2><img src="https://cdn-icons-png.flaticon.com/512/1256/1256654.png" alt="About Icon">About Me</h2>
-            <p>As a senior at Rowan University, I am pursuing a B.S. in Information Systems and Analytics. My background in operations and supply chain management, paired with my expertise in data analysis, positions me uniquely to drive data-driven decision-making and operational excellence.</p>
+        <section id="projects">
+            <div class="project">
+                <img src="path/to/project2-image.jpg" alt="Project 2 Image"> <!-- Replace with your Project 2 image path -->
+                <div>
+                    <h3>Amazon Reviews - Lifestyles Healthcare Customer Sentiment Analysis</h3>
+                    <p>LifeStyles Healthcare aimed to deepen their understanding of customer sentiment and product performance by analyzing product reviews from their Amazon.com pages. To move beyond traditional star ratings, the team implemented sentiment analysis to gain more nuanced insights. This analysis enabled them to predict star ratings based on review text, address customer concerns, and identify impactful keywords for marketing campaigns. The team started by cleaning and organizing the data before creating word clouds and bigrams to visualize commonly used positive and negative terms. Key findings included "good" as the most frequent positive word and "break" as the most common negative term. Additionally, "great product" was identified as the top positive bigram, while "allergic reaction" emerged as the leading negative bigram. These insights were leveraged by the marketing team to enhance Amazon digital campaigns and address product issues. Further analysis involved identifying top- and bottom-performing items to derive actionable strategies for improvement.</p>
+                    <a href="https://github.com/krc31182/project2" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="key-steps">
+                <h3>Key Steps Taken</h3>
+                <ul>
+                    <li>Data Cleaning and Organization:</li>
+                    <ul>
+                        <li>Prepared Amazon review data for analysis by cleaning and structuring it.</li>
+                    </ul>
+                    <li>Visualization:</li>
+                    <ul>
+                        <li>Created word clouds to identify the most frequently used words in positive and negative reviews.</li>
+                        <li>Generated bigrams to analyze common word pairings for positive and negative feedback.</li>
+                    </ul>
+                    <li>Insights Extraction:</li>
+                    <ul>
+                        <li>Identified “good” as the most common positive word and “break” as the most common negative word.</li>
+                        <li>Found "great product" as the top positive bigram and "allergic reaction" as the top negative bigram.</li>
+                    </ul>
+                    <li>Product Performance Analysis:</li>
+                    <ul>
+                        <li>Identified top- and bottom-performing items to derive insights for improving underperforming products.</li>
+                    </ul>
+                    <li>Machine Learning Sentiment Analysis:</li>
+                    <ul>
+                        <li>Split data into training and testing sets.</li>
+                        <li>Resampled the data to address skewness in review star distribution.</li>
+                        <li>Vectorized the data to optimize processing for machine learning models.</li>
+                    </ul>
+                    <li>Model Evaluation:</li>
+                    <ul>
+                        <li>Tested several machine learning models, including:</li>
+                        <ul>
+                            <li>Neural Network: 85% accuracy.</li>
+                            <li>Logistic Regression: 87% accuracy.</li>
+                            <li>Naive Bayes Classifier: 83% accuracy.</li>
+                            <li>Support Vector Machine (SVM): 87% accuracy for positive reviews, 71% for negative reviews.</li>
+                        </ul>
+                    </ul>
+                    <li>Conclusion and Recommendations:</li>
+                    <ul>
+                        <li>Determined the SVM model as the most effective for predicting review sentiment.</li>
+                        <li>Identified actionable insights to improve marketing and product quality.</li>
+                    </ul>
+                </ul>
+            </div>
         </section>
 
         <section id="skills">
@@ -304,7 +326,7 @@
         <section id="education">
             <h2><img src="https://cdn-icons-png.flaticon.com/512/1256/1256647.png" alt="Education Icon">Education</h2>
             <h3>Rowan University</h3>
-            <p>B.S. in Information Systems and Analytics (Expected May 2024)</p>
+            <p>B.S. in Information Systems and Analytics (Expected Winter 2025)</p>
 
             <h3>Rowan College of South Jersey</h3>
             <p>Associate of Business Administration (Jan 2023 – April 2024)</p>
@@ -342,18 +364,4 @@
         });
 
         // Add a scroll-to-top button
-        const scrollToTopBtn = document.createElement('button');
-        scrollToTopBtn.innerHTML = '↑';
-        scrollToTopBtn.style.position = 'fixed';
-        scrollToTopBtn.style.bottom = '20px';
-        scrollToTopBtn.style.right = '20px';
-        scrollToTopBtn.style.font-size = '20px';
-        scrollToTopBtn.style.background-color: var(--secondary-color);
-        scrollToTopBtn.style.color: 'white';
-        scrollToTopBtn.style.border: 'none';
-        scrollToTopBtn.style.border-radius: '50%';
-        scrollToTopBtn.style.width: '40px';
-        scrollToTopBtn.style.height: '40px';
-        scrollToTopBtn.style.cursor: 'pointer';
-        scrollToTopBtn.style.display: 'none';
-        scrollToTopBtn.style.transition: 'opacity
+        const scrollToTopBtn
