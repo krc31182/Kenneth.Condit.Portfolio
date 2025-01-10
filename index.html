@@ -168,9 +168,10 @@
             display: flex;
             flex-direction: column; /* Ensure projects stack vertically */
         }
+        
         #projects .project {
-            flex: 3;
             display: flex;
+            flex-direction: row;
             align-items: center;
             border: 1px solid #ddd;
             padding: 1em;
@@ -179,22 +180,32 @@
             color: var(--text-color); /* Darker text for readability */
             transition: all 0.3s ease-in-out; /* Add transition for dynamic scrolling */
         }
+        
         #projects .project:hover {
             background-color: #f0f0f0; /* Change to light gray on hover */
             transform: scale(1.02); /* Slightly enlarge on hover */
         }
+        
         #projects .project img {
-            width: 300px; /* Make project pictures larger */
-            height: 300px; /* Make project pictures larger */
+            width: 300px; /* Adjust the size for larger screens */
+            height: auto;
+            object-fit: cover; /* Ensure the image fits within the container */
             margin-right: 20px;
         }
-        #projects .project h3 {
-            margin-top: 0;
-        }
-        .key-steps {
+        
+        #projects .project .description {
             flex: 1;
-            margin-left: 20px;
         }
+        
+        #projects .project .description h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        #projects .project .description p {
+            margin-bottom: 10px;
+        }
+        
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -207,88 +218,37 @@
             text-decoration: none;
             transition: background-color 0.3s ease-in-out;
         }
+        
         .button:hover {
             background-color: #c0392b; /* Darker shade of red */
-            #projects {
-                display: flex;
-                flex-direction: column; /* Ensure projects stack vertically */
-            }
-            
+        }
+        
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
             #projects .project {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                border: 1px solid #ddd;
-                padding: 1em;
-                margin-bottom: 1em;
-                background-color: #fff;
-                color: var(--text-color); /* Darker text for readability */
-                transition: all 0.3s ease-in-out; /* Add transition for dynamic scrolling */
+                flex-direction: column; /* Stack images and descriptions vertically */
+                text-align: center;
             }
-            
-            #projects .project:hover {
-                background-color: #f0f0f0; /* Change to light gray on hover */
-                transform: scale(1.02); /* Slightly enlarge on hover */
-            }
-            
+        
             #projects .project img {
-                width: 300px; /* Adjust the size for larger screens */
+                width: 90%; /* Make project pictures responsive */
                 height: auto;
-                margin-right: 20px;
+                margin: 0 0 20px 0; /* Adjust margin for spacing */
             }
-            
+        
             #projects .project .description {
-                flex: 1;
+                padding: 0 10px; /* Add padding for better spacing */
             }
-            
-            #projects .project .description h3 {
-                margin-top: 0;
-                margin-bottom: 10px;
+        }
+        
+        /* Additional media query for very small screens */
+        @media (max-width: 480px) {
+            #projects .project img {
+                width: 100%; /* Ensure project images are responsive */
+                height: auto;
+                margin: 0 0 10px 0; /* Adjust margin for smaller spacing */
             }
-            
-            #projects .project .description p {
-                margin-bottom: 10px;
-            }
-            
-            .button {
-                display: inline-block;
-                padding: 10px 20px;
-                font-size: 16px;
-                font-weight: bold;
-                color: #fff;
-                background-color: var(--accent-color);
-                border: none;
-                border-radius: 5px;
-                text-decoration: none;
-                transition: background-color 0.3s ease-in-out;
-            }
-            
-            .button:hover {
-                background-color: #c0392b; /* Darker shade of red */
-            }
-            
-            /* Media query for smaller screens */
-            @media (max-width: 768px) {
-                #projects .project {
-                    flex-direction: column; /* Stack images and descriptions vertically */
-                    text-align: center;
-                }
-            
-                #projects .project img {
-                    width: 100%; /* Make project pictures responsive */
-                    height: auto;
-                    margin: 0 0 20px 0; /* Adjust margin for spacing */
-                }
-            }
-            
-            /* Additional media query for very small screens */
-            @media (max-width: 480px) {
-                #projects .project img {
-                    width: 100%; /* Ensure project images are responsive */
-                    height: auto;
-                    margin: 0 0 10px 0; /* Adjust margin for smaller spacing */
-                }
-            }
+        }
 
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
