@@ -209,54 +209,87 @@
         }
         .button:hover {
             background-color: #c0392b; /* Darker shade of red */
-        
-        @media (max-width: 768px) {
-                .header-content {
-                    flex-direction: column;
-                    align-items: center;
-                }
+            #projects {
+                display: flex;
+                flex-direction: column; /* Ensure projects stack vertically */
+            }
             
-                header h1 {
-                    margin-bottom: 10px;
-                    text-align: center;
-                }
+            #projects .project {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border: 1px solid #ddd;
+                padding: 1em;
+                margin-bottom: 1em;
+                background-color: #fff;
+                color: var(--text-color); /* Darker text for readability */
+                transition: all 0.3s ease-in-out; /* Add transition for dynamic scrolling */
+            }
             
-                header #profile img {
-                    width: 120px; /* Adjust the size if needed */
-                    height: 120px; /* Adjust the size if needed */
-                }
+            #projects .project:hover {
+                background-color: #f0f0f0; /* Change to light gray on hover */
+                transform: scale(1.02); /* Slightly enlarge on hover */
+            }
             
-                #projects {
-                    flex-direction: column; /* Ensure projects stack vertically */
-                }
+            #projects .project img {
+                width: 300px; /* Adjust the size for larger screens */
+                height: auto;
+                margin-right: 20px;
+            }
             
+            #projects .project .description {
+                flex: 1;
+            }
+            
+            #projects .project .description h3 {
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+            
+            #projects .project .description p {
+                margin-bottom: 10px;
+            }
+            
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                color: #fff;
+                background-color: var(--accent-color);
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s ease-in-out;
+            }
+            
+            .button:hover {
+                background-color: #c0392b; /* Darker shade of red */
+            }
+            
+            /* Media query for smaller screens */
+            @media (max-width: 768px) {
                 #projects .project {
-                    flex-direction: column;
+                    flex-direction: column; /* Stack images and descriptions vertically */
                     text-align: center;
                 }
             
                 #projects .project img {
                     width: 100%; /* Make project pictures responsive */
                     height: auto;
-                    margin: 0 auto 20px auto;
+                    margin: 0 0 20px 0; /* Adjust margin for spacing */
                 }
             }
             
             /* Additional media query for very small screens */
             @media (max-width: 480px) {
-                header #profile img {
-                    width: 100px; /* Further adjust the size for very small screens */
-                    height: 100px; /* Further adjust the size for very small screens */
-                }
-            
                 #projects .project img {
                     width: 100%; /* Ensure project images are responsive */
                     height: auto;
-                    margin: 0 auto 10px auto;
+                    margin: 0 0 10px 0; /* Adjust margin for smaller spacing */
                 }
-            }    
-        
-        }
+            }
+
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
