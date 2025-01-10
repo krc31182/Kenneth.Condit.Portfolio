@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="https://krc31182.github.io/Kenneth.Condit.Portfolio/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenneth R. Condit Portfolio</title>
@@ -35,18 +36,19 @@
             text-align: left;
             border-bottom: var(--secondary-color) 3px solid;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+        }
+        header #profile {
+            margin-right: 20px;
+        }
+        header #profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
         }
         header h1 {
             margin: 0;
             font-size: 48px; /* Larger font for the name */
-        }
-        header img#profile-picture {
-            width: 200px; /* Adjust the width as needed */
-            height: 200px; /* Adjust the height as needed */
-            border-radius: 50%;
-            margin-right: 20px;
         }
         nav {
             background: var(--primary-color);
@@ -60,7 +62,6 @@
             text-transform: uppercase;
             font-size: 16px;
             margin: 0 15px;
-            transition: color 0.3s;
         }
         nav .highlight, nav .current a {
             color: var(--accent-color);
@@ -101,6 +102,10 @@
         #boxes .box:hover {
             transform: translateY(-5px);
         }
+        #boxes .box img, #boxes .box i {
+            width: 90px;
+            filter: invert(45%) sepia(36%) saturate(2281%) hue-rotate(341deg) brightness(100%) contrast(89%);
+        }
         footer {
             padding: 20px;
             margin-top: 20px;
@@ -132,17 +137,12 @@
             list-style-type: none;
             padding-left: 0;
         }
-        ul li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
-        }
         ul li:before {
-            content: "\f00c"; /* FontAwesome check icon */
-            font-family: "FontAwesome";
-            position: absolute;
-            left: 0;
+            content: "•";
             color: var(--accent-color);
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
         }
         a {
             color: var(--accent-color);
@@ -154,11 +154,10 @@
         /* Projects Section */
         #projects {
             display: flex;
-            flex-direction: column;
         }
         #projects .project {
+            flex: 3;
             display: flex;
-            flex-direction: column;
             align-items: center;
             border: 1px solid #ddd;
             padding: 1em;
@@ -167,9 +166,9 @@
             color: var(--text-color); /* Darker text for readability */
         }
         #projects .project img {
-            width: 300px; /* Adjust the width as needed */
-            height: auto; /* Keep the aspect ratio */
-            margin-bottom: 20px;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
         }
         #projects .project h3 {
             margin-top: 0;
@@ -178,29 +177,18 @@
             flex: 1;
             margin-left: 20px;
         }
-        /* Hover Effects */
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #ffffff;
-            background: var(--primary-color);
-            border: none;
-            border-radius: 5px;
-            transition: background 0.3s, transform 0.3s;
-            text-decoration: none;
-        }
-        .btn:hover {
-            background: var(--accent-color);
-            transform: translateY(-3px);
-        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Kenneth R. Condit</h1>
-        <img src="images/PrestigePic.JPG" alt="Profile Picture" id="profile-picture">
+        <div class="container">
+            <div id="profile">
+                <!-- Placeholder for profile picture -->
+                <img src="images/PrestigePic.JPG" alt="Profile Picture">
+            </div>
+            <h1>Kenneth R. Condit</h1>
+        </div>
     </header>
 
     <nav>
@@ -238,7 +226,7 @@
                 <div>
                     <h3>Unsupervised Machine Learning - Predicting Myopia (Nearsightedness)</h3>
                     <p>Through application of unsupervised machine learning techniques, the myopia dataset reveals three distinct clusters, offering profound insights into patient segmentation. This clustering was achieved through the implementation of principal component analysis (PCA), a powerful dimensionality reduction method. Utilizing two principal components, the model captures 38% of the dataset's variance, providing a substantial representation of the underlying data structure. Expanding to three principal components increases the captured variance to 47.24%, offering a more comprehensive view of the dataset's inherent patterns. The analysis unveils clear and significant groupings of patient characteristics within the dataset, suggesting distinct subpopulations or phenotypes related to myopia.</p>
-                    <a href="https://github.com/krc31182/Unsupervised-Machine-Learning" target="_blank" class="btn">View on GitHub</a>
+                    <a href="https://github.com/krc31182/Unsupervised-Machine-Learning" target="_blank">View on GitHub</a>
                 </div>
             </div>
             <div class="key-steps">
@@ -257,7 +245,7 @@
                 <div>
                     <h3>Amazon Reviews - Lifestyles Healthcare Customer Sentiment Analysis</h3>
                     <p>LifeStyles Healthcare aimed to deepen their understanding of customer sentiment and product performance by analyzing product reviews from their Amazon.com pages. To move beyond traditional star ratings, the team implemented sentiment analysis to gain more nuanced insights. This analysis enabled them to predict star ratings based on review text, address customer concerns, and identify impactful keywords for marketing campaigns. The team started by cleaning and organizing the data before creating word clouds and bigrams to visualize commonly used positive and negative terms. Key findings included "good" as the most frequent positive word and "break" as the most common negative term. Additionally, "great product" was identified as the top positive bigram, while "allergic reaction" emerged as the leading negative bigram. These insights were leveraged by the marketing team to enhance Amazon digital campaigns and address product issues. Further analysis involved identifying top- and bottom-performing items to derive actionable strategies for improvement.</p>
-                    <a href="https://github.com/krc31182/Amazon-Reviews" target="_blank" class="btn">View on GitHub</a>
+                    <a href="https://github.com/krc31182/Amazon-Reviews" target="_blank">View on GitHub</a>
                 </div>
             </div>
             <div class="key-steps">
@@ -356,3 +344,12 @@
             <p>Email: <a href="mailto:krcondit@outlook.com">krcondit@outlook.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/ken-condit/" target="_blank">Ken Condit</a></p>
             <p>GitHub: <a href="https://github.com/krc31182" target="_blank">krc31182 (Kenneth Condit)</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Kenneth R. Condit. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
