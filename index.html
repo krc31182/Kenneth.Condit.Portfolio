@@ -249,7 +249,101 @@
                 margin: 10px 0 0 0; /* Adjust margin for smaller spacing */
             }
         }
-
+        .projects {
+            margin-bottom: 2em; /* Add some space between project sections */
+        }
+        
+        .project {
+            display: flex;
+            flex-direction: row-reverse; /* Place images to the right */
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin-bottom: 1em;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out; /* Add transition for dynamic scrolling */
+        }
+        
+        .project:hover {
+            background-color: #f0f0f0; /* Change to light gray on hover */
+            transform: scale(1.02); /* Slightly enlarge on hover */
+        }
+        
+        .project img {
+            width: 300px; /* Adjust the size for larger screens */
+            height: auto;
+            object-fit: cover; /* Ensure the image fits within the container */
+            margin-left: 20px; /* Add space between image and text */
+        }
+        
+        .project div {
+            flex: 1;
+        }
+        
+        .project h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .project p {
+            margin-bottom: 10px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: var(--accent-color);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .button:hover {
+            background-color: #c0392b; /* Darker shade of red */
+        }
+        
+        .key-steps {
+            margin-top: 1em;
+        }
+        
+        .key-steps h3 {
+            margin-top: 0;
+        }
+        
+        .key-steps ul {
+            padding-left: 1.5em;
+        }
+        
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column; /* Stack images and descriptions vertically */
+                text-align: center;
+            }
+        
+            .project img {
+                width: 100%; /* Make project pictures responsive */
+                height: auto;
+                margin: 20px 0 0 0; /* Adjust margin for spacing */
+            }
+        
+            .project div {
+                padding: 0 10px; /* Add padding for better spacing */
+            }
+        }
+        
+        /* Additional media query for very small screens */
+        @media (max-width: 480px) {
+            .project img {
+                width: 100%; /* Ensure project images are responsive */
+                height: auto;
+                margin: 10px 0 0 0; /* Adjust margin for smaller spacing */
+            }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -294,80 +388,90 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects">
-            <div class="project">
-                <img src="images/h-heyerlein-ndja2LJ4IcM-unsplash.jpg" alt="Project 1 Image"> <!-- Replace with your Project 1 image path -->
-                <div>
-                    <h3>Unsupervised Machine Learning - Predicting Myopia (Nearsightedness)</h3>
-                    <p>Through application of unsupervised machine learning techniques, the myopia dataset reveals three distinct clusters, offering profound insights into patient segmentation. This clustering was achieved through the implementation of principal component analysis (PCA), a powerful dimensionality reduction method. Utilizing two principal components, the model captures 38% of the dataset's variance, providing a substantial representation of the underlying data structure. Expanding to three principal components increases the captured variance to 47.24%, offering a more comprehensive view of the dataset's inherent patterns. The analysis unveils clear and significant groupings of patient characteristics within the dataset, suggesting distinct subpopulations or phenotypes related to myopia.</p>
-                    <a href="https://github.com/krc31182/Unsupervised-Machine-Learning" class="button" target="_blank">View on GitHub</a>
-                </div>
-            </div>
-            <div class="key-steps">
-                <h3>Key Steps Taken</h3>
-                <ul>
-                    <li>Data Preprocessing: The dataset was cleaned and standardized to remove any biases before applying machine learning algorithms.</li>
-                    <li>Dimensionality Reduction: PCA (Principal Component Analysis) was used to reduce the number of features while preserving 90% of the data variance.</li>
-                    <li>Cluster Analysis: K-means clustering was performed to identify potential clusters in the data. An elbow plot was used to determine the optimal number of clusters.</li>
-                    <li>Visualization: t-SNE was applied to visualize the dimensionality reduction and inspect the distinctness of clusters.</li>
-                </ul>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="project">
-                <img src="images/Principal_component_analysis_image1.png" alt="Project 2 Image"> <!-- Replace with your Project 2 image path -->
-                <div>
-                    <h3>Amazon Reviews - Lifestyles Healthcare Customer Sentiment Analysis</h3>
-                    <p>LifeStyles Healthcare aimed to deepen their understanding of customer sentiment and product performance by analyzing product reviews from their Amazon.com pages. To move beyond traditional star ratings, the team implemented sentiment analysis to gain more nuanced insights. This analysis enabled them to predict star ratings based on review text, address customer concerns, and identify impactful keywords for marketing campaigns. The team started by cleaning and organizing the data before creating word clouds and bigrams to visualize commonly used positive and negative terms. Key findings included "good" as the most frequent positive word and "break" as the most common negative term. Additionally, "great product" was identified as the top positive bigram, while "allergic reaction" emerged as the leading negative bigram. These insights were leveraged by the marketing team to enhance Amazon digital campaigns and address product issues. Further analysis involved identifying top- and bottom-performing items to derive actionable strategies for improvement.</p>
-                    <a href="https://github.com/krc31182/Amazon-Reviews" class="button" target="_blank">View on GitHub</a>
-                </div>
-            </div>
-            <div class="key-steps">
-                <h3>Key Steps Taken</h3>
-                <ul>
-                    <li>Data Cleaning and Organization:</li>
-                    <ul>
-                        <li>Prepared Amazon review data for analysis by cleaning and structuring it.</li>
-                    </ul>
-                    <li>Visualization:</li>
-                    <ul>
-                        <li>Created word clouds to identify the most frequently used words in positive and negative reviews.</li>
-                        <li>Generated bigrams to analyze common word pairings for positive and negative feedback.</li>
-                    </ul>
-                    <li>Insights Extraction:</li>
-                    <ul>
-                        <li>Identified “good” as the most common positive word and “break” as the most common negative word.</li>
-                        <li>Found "great product" as the top positive bigram and "allergic reaction" as the top negative bigram.</li>
-                    </ul>
-                    <li>Product Performance Analysis:</li>
-                    <ul>
-                        <li>Identified top- and bottom-performing items to derive insights for improving underperforming products.</li>
-                    </ul>
-                    <li>Machine Learning Sentiment Analysis:</li>
-                    <ul>
-                        <li>Split data into training and testing sets.</li>
-                        <li>Resampled the data to address skewness in review star distribution.</li>
-                        <li>Vectorized the data to optimize processing for machine learning models.</li>
-                    </ul>
-                    <li>Model Evaluation:</li>
-                    <ul>
-                        <li>Tested several machine learning models, including:</li>
-                        <ul>
-                            <li>Neural Network: 85% accuracy.</li>
-                            <li>Logistic Regression: 87% accuracy.</li>
-                            <li>Naive Bayes Classifier: 83% accuracy.</li>
-                            <li>Support Vector Machine (SVM): 87% accuracy for positive reviews, 71% for negative reviews.</li>
-                        </ul>
-                    </ul>
-                    <li>Conclusion and Recommendations:</li>
-                    <ul>
-                        <li>Determined the SVM model as the most effective for predicting review sentiment.</li>
-                        <li>Identified actionable insights to improve marketing and product quality.</li>
-                    </ul>
-                </ul>
-            </div>
-        </section>
+        <!-- Projects Section -->
+<section class="projects">
+    <div class="project">
+        <img src="images/h-heyerlein-ndja2LJ4IcM-unsplash.jpg" alt="Project 1 Image"> <!-- Replace with your Project 1 image path -->
+        <div>
+            <h3>Unsupervised Machine Learning - Predicting Myopia (Nearsightedness)</h3>
+            <p>Through application of unsupervised machine learning techniques, the myopia dataset reveals three distinct clusters, offering profound insights into patient segmentation. This clustering was achieved through the implementation of principal component analysis (PCA), a powerful dimensionality reduction method. Utilizing two principal components, the model captures 38% of the dataset's variance, providing a substantial representation of the underlying data structure. Expanding to three principal components increases the captured variance to 47.24%, offering a more comprehensive view of the dataset's inherent patterns. The analysis unveils clear and significant groupings of patient characteristics within the dataset, suggesting distinct subpopulations or phenotypes related to myopia.</p>
+            <a href="https://github.com/krc31182/Unsupervised-Machine-Learning" class="button" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+    <div class="key-steps">
+        <h3>Key Steps Taken</h3>
+        <ul>
+            <li>Data Preprocessing: The dataset was cleaned and standardized to remove any biases before applying machine learning algorithms.</li>
+            <li>Dimensionality Reduction: PCA (Principal Component Analysis) was used to reduce the number of features while preserving 90% of the data variance.</li>
+            <li>Cluster Analysis: K-means clustering was performed to identify potential clusters in the data. An elbow plot was used to determine the optimal number of clusters.</li>
+            <li>Visualization: t-SNE was applied to visualize the dimensionality reduction and inspect the distinctness of clusters.</li>
+        </ul>
+    </div>
+</section>
 
+<section class="projects">
+    <div class="project">
+        <img src="images/Principal_component_analysis_image1.png" alt="Project 2 Image"> <!-- Replace with your Project 2 image path -->
+        <div>
+            <h3>Amazon Reviews - Lifestyles Healthcare Customer Sentiment Analysis</h3>
+            <p>LifeStyles Healthcare aimed to deepen their understanding of customer sentiment and product performance by analyzing product reviews from their Amazon.com pages. To move beyond traditional star ratings, the team implemented sentiment analysis to gain more nuanced insights. This analysis enabled them to predict star ratings based on review text, address customer concerns, and identify impactful keywords for marketing campaigns. The team started by cleaning and organizing the data before creating word clouds and bigrams to visualize commonly used positive and negative terms. Key findings included "good" as the most frequent positive word and "break" as the most common negative term. Additionally, "great product" was identified as the top positive bigram, while "allergic reaction" emerged as the leading negative bigram. These insights were leveraged by the marketing team to enhance Amazon digital campaigns and address product issues. Further analysis involved identifying top- and bottom-performing items to derive actionable strategies for improvement.</p>
+            <a href="https://github.com/krc31182/Amazon-Reviews" class="button" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+    <div class="key-steps">
+        <h3>Key Steps Taken</h3>
+        <ul>
+            <li>Data Cleaning and Organization.</li>
+            <li>Prepared Amazon review data for analysis by cleaning and structuring it.</li>
+            <li>Created word cloud visualizations to identify the most frequently used words in positive and negative reviews.</li>
+            <li>Generated bigrams to analyze common word pairings for positive and negative feedback.</li>
+            <li>Identified “good” as the most common positive word and “break” as the most common negative word.</li>
+            <li>Found "great product" as the top positive bigram and "allergic reaction" as the top negative bigram.</li>
+            <li>Product Performance Analysis:</li>
+            <li>Identified top and bottom-performing items to derive insights for improving underperforming products.</li>
+            <li>Machine Learning Sentiment Analysis:</li>
+            <li>Split data into training and testing sets.</li>
+            <li>Resampled the data to address skewness in review star distribution.</li>
+            <li>Vectorized the data to optimize processing for machine learning models.</li>
+            <li>Tested several machine learning models.</li>
+            <li>Neural Network: 85% accuracy.</li>
+            <li>Logistic Regression: 87% accuracy.</li>
+            <li>Naive Bayes Classifier: 83% accuracy.</li>
+            <li>Support Vector Machine (SVM): 87% accuracy for positive reviews, 71% for negative reviews.</li>
+            <li>Determined the SVM model as the most effective for predicting review sentiment.</li>
+            <li>Identified actionable insights to improve marketing and product quality.</li>
+            </ul>
+        </ul>
+    </div>
+</section>
+
+<section class="projects">
+    <div class="project">
+        <img src="images/comp_futuristic.jpeg" alt="Project 3 Image"> <!-- Replace with your Project 3 image path -->
+        <div>
+            <h3>SQL Challenge: Data Engineering and Analysis at Pewlett Hackard</h3>
+            <p>This project demonstrates advanced data engineering and analysis techniques applied to a company's employee dataset from the 1980s and 1990s. The goal was to design a robust database schema, execute data transformations, and extract meaningful insights using SQL. This comprehensive exploration of data handling and analysis showcases proficiency in data modeling, ETL processes, and visualization.
+
+                Key project highlights include creating a PostgreSQL database schema, efficiently importing CSV datasets while adhering to foreign key dependencies, and analyzing employee and departmental data to answer complex business questions. To add a visual layer of insight, the project integrates SQL results with Python-based visualizations using Pandas and Matplotlib.</p>
+            <a href="https://github.com/krc31182/Sql-Challenge" class="button" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+    <div class="key-steps">
+        <h3>Key Steps Taken</h3>
+        <ul>
+        <li>Designed a relational database schema for six CSV datasets.</li>
+        <li>Defined data types, primary keys, foreign keys, and constraints to ensure data integrity.</li>
+        <li>Imported CSV files into PostgreSQL tables, adhering to dependency order for foreign keys.</li>
+        <li>Analyzed last name frequency among employees to uncover trends.</li>
+        <li>Connected the database to a Jupyter Notebook using SQLAlchemy</li>
+        <li>Created visualizations using Python and Matplotlib. The visualizations included a histogram of salary distribution and a bar chart displaying average salary by job.</li>
+        <li>Structured the project repository with clear, well-documented scripts and notebooks.</li>
+        <li>Utilized PostgreSQL for database management.</li>
+        <li>Wrote efficient SQL queries for data analysis.</li>
+        <li>Leveraged Python libraries (Pandas, Matplotlib) for data visualization and insights.</li>
+        </ul>
+    </div>
+</section>
         <section id="skills">
             <h2><img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Skills Icon">Skills</h2>
             <ul>
