@@ -16,6 +16,7 @@
             --text-color: #000000; /* Black text */
             --header-background: #17202a; /* Even darker background for header */
         }
+        
         body {
             font-family: 'Raleway', sans-serif; /* Body text in Raleway */
             line-height: 1.6;
@@ -24,31 +25,33 @@
             padding: 0;
             background-color: var(--background-color);
         }
+        
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
             padding: 0 20px;
         }
+        
         header {
             background: var(--header-background);
             color: #ffffff;
             padding: 20px 0;
             border-bottom: var(--secondary-color) 3px solid;
         }
-
+        
         header .container {
             display: flex;
             align-items: center;
             justify-content: space-between; /* Space between the name and profile picture */
         }
-
+        
         header .name-and-title {
             display: flex;
             flex-direction: column;
             font-family: 'Roboto', sans-serif; /* Use Roboto for the header */
         }
-
+        
         @keyframes shine {
             0% {
                 background-position: -100%;
@@ -57,7 +60,7 @@
                 background-position: 100%;
             }
         }
-
+        
         header h1, header span {
             margin: 0;
             position: relative;
@@ -70,17 +73,17 @@
             background-size: 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shine 3s infinite;
+            animation: shine 2s infinite;
         }
-
+        
         header span {
             font-size: 24px; /* Smaller font for the title */
         }
-
+        
         header #profile img {
-            width: 125px;
-            height: 130px;
-            border-radius: 40%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
         }
         
         nav {
@@ -89,6 +92,7 @@
             text-align: center;
             padding: 10px 0;
         }
+        
         nav a {
             color: #ffffff;
             text-decoration: none;
@@ -96,39 +100,47 @@
             font-size: 16px;
             margin: 0 15px;
         }
+        
         nav .highlight, nav .current a {
             color: var(--accent-color);
             font-weight: bold;
         }
+        
         nav a:hover {
             color: var(--accent-color);
             font-weight: bold;
         }
+        
         #showcase {
             min-height: 400px;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1015&q=80') no-repeat center center/cover;
             text-align: center;
             color: #ffffff;
         }
+        
         #showcase h1 {
             margin-top: 100px;
             font-family: 'Raleway', sans-serif;
             font-size: 55px;
         }
+        
         #showcase h1 span {
             display: block;
             color: #FF6347; /* Standout color for goal text */
             font-family: 'Raleway', sans-serif;
             font-size: 32px; /* Adjust font size for goal text */
         }
+        
         #showcase p {
             font-size: 20px;
             font-family: 'Raleway', sans-serif;
             color: #32CD32; /* Third color for standout text */
         }
+        
         #boxes {
             margin-top: 20px;
         }
+        
         #boxes .box {
             width: 100%;
             padding: 10px;
@@ -140,13 +152,16 @@
             transition: transform 0.3s ease-in-out;
             color: var(--text-color); /* Darker text for readability */
         }
+        
         #boxes .box:hover {
             transform: translateY(-5px);
         }
+        
         #boxes .box img, #boxes .box i {
             width: 90px;
             filter: invert(45%) sepia(36%) saturate(2281%) hue-rotate(341deg) brightness(100%) contrast(89%);
         }
+        
         footer {
             padding: 20px;
             margin-top: 20px;
@@ -154,6 +169,7 @@
             background-color: var(--secondary-color);
             text-align: center;
         }
+        
         section {
             background-color: #ffffff;
             margin: 20px 0;
@@ -163,10 +179,12 @@
             color: var(--text-color); /* Darker text for readability */
             transition: all 0.3s ease-in-out; /* Add transition for dynamic scrolling */
         }
+        
         section:hover {
             background-color: #f0f0f0; /* Change to light gray on hover */
             transform: scale(1.02); /* Slightly enlarge on hover */
         }
+        
         h2 {
             color: var(--primary-color);
             border-bottom: 2px solid var(--accent-color);
@@ -175,18 +193,22 @@
             align-items: center;
             font-family: 'Roboto', sans-serif; /* Headings in Roboto */
         }
+        
         h2 img {
             margin-right: 10px;
             width: 30px;
             height: 30px;
         }
+        
         ul {
             list-style-type: none;
             padding-left: 0;
         }
+        
         ul li:before {
             content: ""; /* Remove checkmarks for skills list */
         }
+        
         .key-steps ul li:before {
             content: "\2713"; /* Checkmark */
             color: var(--accent-color);
@@ -194,13 +216,16 @@
             width: 1em;
             margin-left: -1em;
         }
+        
         a {
             color: var(--accent-color);
             text-decoration: none;
         }
+        
         a:hover {
             text-decoration: underline;
         }
+        
         /* Projects Section */
         #projects {
             display: flex;
@@ -287,6 +312,7 @@
                 margin: 10px 0 0 0; /* Adjust margin for smaller spacing */
             }
         }
+        
         .projects {
             margin-bottom: 2em; /* Add some space between project sections */
         }
@@ -386,35 +412,43 @@
                 margin: 10px 0 0 0; /* Adjust margin for smaller spacing */
             }
         }
-            .contact-button {
-                background-color: #ff0000; /* Bright red background */
-                color: #ffffff; /* White text */
-                padding: 10px 20px;
-                border-radius: 5px;
-                font-weight: bold;
-                transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-                animation: pulse 2s infinite; /* Add pulse animation */
+        
+        .contact-button {
+            background-color: #ff0000; /* Bright red background */
+            color: #ffffff; /* White text */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            animation: pulse 2s infinite; /* Add pulse animation */
         }
-
-            .contact-button:hover {
-                background-color: #cc0000; /* Darker shade of red on hover */
-                transform: scale(1.1); /* Slightly enlarge on hover */
+        
+        .contact-button:hover {
+            background-color: #cc0000; /* Darker shade of red on hover */
+            transform: scale(1.1); /* Slightly enlarge on hover */
         }
-
+        
         @keyframes pulse {
             0% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
-        }
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+            }
             70% {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px 15px rgba(255, 0, 0, 0);
-    }
+                transform: scale(1.1);
+                box-shadow: 0 0 15px 15px rgba(255, 0, 0, 0);
+            }
             100% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+            }
         }
-    }
+        
+        /* Media query for iPhone screens */
+        @media (max-width: 480px) {
+            header #profile img {
+                margin-left: -20px; /* Move the profile picture to the left */
+            }
+        }
     </style>
 
 </head>
