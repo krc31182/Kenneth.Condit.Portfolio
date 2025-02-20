@@ -10,16 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2c3e50; /* Darker blue-gray */
-            --secondary-color: #34495e; /* Dark blue-gray */
-            --accent-color: #e74c3c; /* Red */
-            --background-color: #1a252f; /* Dark background */
-            --text-color: #000000; /* Black text */
-            --header-background: #17202a; /* Even darker background for header */
+            --primary-color: #2c3e50; 
+            --secondary-color: #34495e; 
+            --accent-color: #e74c3c; 
+            --background-color: #1a252f; 
+            --text-color: #000000; 
+            --header-background: #17202a; 
         }
         
         body {
-            font-family: 'Raleway', sans-serif; /* Body text in Raleway */
+            font-family: 'Raleway', sans-serif; 
             line-height: 1.6;
             color: var(--text-color);
             margin: 0;
@@ -44,13 +44,13 @@
         header .container {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Space between the name and profile picture */
+            justify-content: space-between; 
         }
         
         header .name-and-title {
             display: flex;
             flex-direction: column;
-            font-family: 'Roboto', sans-serif; /* Use Roboto for the header */
+            font-family: 'Roboto', sans-serif; 
         }
         
         @keyframes shine {
@@ -67,7 +67,7 @@
             position: relative;
             display: inline-block;
             font-family: 'Raleway', sans-serif;
-            font-size: 64px; /* Larger font for the name */
+            font-size: 64px; 
             color: #ffffff; 
             background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.878), transparent);
             background-repeat: no-repeat;
@@ -78,7 +78,7 @@
         }
         
         header span {
-            font-size: 24px; /* Smaller font for the title */
+            font-size: 24px;
         }
         
         header #profile img {
@@ -127,15 +127,15 @@
         
         #showcase h1 span {
             display: block;
-            color: #FF6347; /* Standout color for goal text */
+            color: #FF6347; 
             font-family: 'Raleway', sans-serif;
-            font-size: 32px; /* Adjust font size for goal text */
+            font-size: 32px; 
         }
         
         #showcase p {
             font-size: 20px;
             font-family: 'Raleway', sans-serif;
-            color: #32CD32; /* Third color for standout text */
+            color: #32CD32; 
         }
         
         #boxes {
@@ -151,7 +151,7 @@
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
-            color: var(--text-color); /* Darker text for readability */
+            color: var(--text-color); 
         }
         
         #boxes .box:hover {
@@ -177,13 +177,13 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            color: var(--text-color); /* Darker text for readability */
-            transition: all 0.3s ease-in-out; /* Add transition for dynamic scrolling */
+            color: var(--text-color); 
+            transition: all 0.3s ease-in-out; 
         }
         
         section:hover {
-            background-color: #f0f0f0; /* Change to light gray on hover */
-            transform: scale(1.02); /* Slightly enlarge on hover */
+            background-color: #f0f0f0; 
+            transform: scale(1.02); 
         }
         
         h2 {
@@ -192,7 +192,7 @@
             padding-bottom: 10px;
             display: flex;
             align-items: center;
-            font-family: 'Roboto', sans-serif; /* Headings in Roboto */
+            font-family: 'Roboto', sans-serif; 
         }
         
         h2 img {
@@ -207,11 +207,11 @@
         }
         
         ul li:before {
-            content: ""; /* Remove checkmarks for skills list */
+            content: ""; 
         }
         
         .key-steps ul li:before {
-            content: "\2713"; /* Checkmark */
+            content: "\2713"; 
             color: var(--accent-color);
             display: inline-block;
             width: 1em;
@@ -230,30 +230,30 @@
         /* Projects Section */
         #projects {
             display: flex;
-            flex-direction: column; /* Ensure projects stack vertically */
+            flex-direction: column; 
         }
         
         #projects .project {
             display: flex;
-            flex-direction: row-reverse; /* Align images to the right */
+            flex-direction: row-reverse; 
             align-items: center;
             border: 1px solid #ddd;
             padding: 1em;
             margin-bottom: 1em;
             background-color: #fff;
-            color: var(--text-color); /* Darker text for readability */
-            transition: all 0.3s ease-in-out; /* Add transition for dynamic scrolling */
+            color: var(--text-color);
+            transition: all 0.3s ease-in-out; 
         }
         
         #projects .project:hover {
-            background-color: #f0f0f0; /* Change to light gray on hover */
-            transform: scale(1.02); /* Slightly enlarge on hover */
+            background-color: #f0f0f0; 
+            transform: scale(1.02); 
         }
         
         #projects .project img {
-            width: 300px; /* Adjust the size for larger screens */
+            width: 300px; 
             height: auto;
-            object-fit: cover; /* Ensure the image fits within the container */
+            object-fit: cover; 
             margin-left: 20px;
         }
         
@@ -284,24 +284,24 @@
         }
         
         .button:hover {
-            background-color: #c0392b; /* Darker shade of red */
+            background-color: #c0392b; 
         }
         
         /* Media query for smaller screens */
         @media (max-width: 768px) {
             #projects .project {
-                flex-direction: column; /* Stack images and descriptions vertically */
+                flex-direction: column; 
                 text-align: center;
             }
         
             #projects .project img {
-                width: 100%; /* Make project pictures responsive */
+                width: 100%; 
                 height: auto;
-                margin: 20px 0 0 0; /* Adjust margin for spacing */
+                margin: 20px 0 0 0; 
             }
         
             #projects .project .description {
-                padding: 0 10px; /* Add padding for better spacing */
+                padding: 0 10px; 
             }
         }
         
@@ -315,30 +315,30 @@
         }
         
         .projects {
-            margin-bottom: 2em; /* Add some space between project sections */
+            margin-bottom: 2em; 
         }
         
         .project {
             display: flex;
-            flex-direction: row-reverse; /* Place images to the right */
+            flex-direction: row-reverse; 
             align-items: center;
             border: 1px solid #ddd;
             padding: 1em;
             margin-bottom: 1em;
             background-color: #fff;
-            transition: all 0.3s ease-in-out; /* Add transition for dynamic scrolling */
+            transition: all 0.3s ease-in-out; 
         }
         
         .project:hover {
-            background-color: #e4dfdf; /* Change to light gray on hover */
-            transform: scale(1.02); /* Slightly enlarge on hover */
+            background-color: #e4dfdf; 
+            transform: scale(1.02); 
         }
         
         .project img {
-            width: 300px; /* Adjust the size for larger screens */
+            width: 300px; 
             height: auto;
-            object-fit: cover; /* Ensure the image fits within the container */
-            margin-left: 20px; /* Add space between image and text */
+            object-fit: cover; 
+            margin-left: 20px; 
         }
         
         .project div {
@@ -348,12 +348,12 @@
         .project h3 {
             margin-top: 0;
             margin-bottom: 10px;
-            font-family: 'Roboto', sans-serif; /* Headings in Roboto */
+            font-family: 'Roboto', sans-serif; 
         }
         
         .project p {
             margin-bottom: 10px;
-            font-family: 'Raleway', sans-serif; /* Body text in Raleway */
+            font-family: 'Raleway', sans-serif; 
         }
         
         .button {
@@ -370,7 +370,7 @@
         }
         
         .button:hover {
-            background-color: #c0392b; /* Darker shade of red */
+            background-color: #c0392b; 
         }
         
         .key-steps {
@@ -379,54 +379,54 @@
         
         .key-steps h3 {
             margin-top: 0;
-            font-family: 'Raleway', sans-serif;/* Headings in Roboto */
+            font-family: 'Raleway', sans-serif;
         }
         
         .key-steps ul {
             padding-left: 1.5em;
-            font-family: 'Raleway', sans-serif; /* Body text in Raleway */
+            font-family: 'Raleway', sans-serif; 
         }
         
         /* Media query for smaller screens */
         @media (max-width: 768px) {
             .project {
-                flex-direction: column; /* Stack images and descriptions vertically */
+                flex-direction: column; 
                 text-align: center;
             }
         
             .project img {
-                width: 100%; /* Make project pictures responsive */
+                width: 100%; 
                 height: auto;
-                margin: 20px 0 0 0; /* Adjust margin for spacing */
+                margin: 20px 0 0 0; 
             }
         
             .project div {
-                padding: 0 10px; /* Add padding for better spacing */
+                padding: 0 10px; 
             }
         }
         
         /* Additional media query for very small screens */
         @media (max-width: 480px) {
             .project img {
-                width: 100%; /* Ensure project images are responsive */
+                width: 100%; 
                 height: auto;
-                margin: 10px 0 0 0; /* Adjust margin for smaller spacing */
+                margin: 10px 0 0 0; 
             }
         }
         
         .contact-button {
-            background-color: #ff0000; /* Bright red background */
-            color: #ffffff; /* White text */
+            background-color: #ff0000; 
+            color: #ffffff; 
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-            animation: pulse 2s infinite; /* Add pulse animation */
+            animation: pulse 2s infinite; 
         }
         
         .contact-button:hover {
-            background-color: #cc0000; /* Darker shade of red on hover */
-            transform: scale(1.1); /* Slightly enlarge on hover */
+            background-color: #cc0000; 
+            transform: scale(1.1); 
         }
         
         @keyframes pulse {
@@ -447,7 +447,7 @@
         /* Media query for iPhone screens */
         @media (max-width: 480px) {
             header #profile img {
-                margin-left: -20px; /* Move the profile picture to the left */
+                margin-left: -20px; 
             }
         }
     </style>
